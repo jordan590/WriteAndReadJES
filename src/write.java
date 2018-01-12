@@ -9,13 +9,13 @@
  * @author test
  */
 import java.io.*;
-public class write {
-    public static void writeTest(){
-    int church = 7;
-		int army = 3;
-		int popularity = 8;
-		int wealth = 9;
-		int cardNum = 25;
+public class write extends read{
+    public static void writeTest(int c, int a, int p, int w, int cN){
+//                int church = 7;
+//		int army = 3;
+//		int popularity = 8;
+//		int wealth = 9;
+//		int cardNum = 25;
 		File testFile = new File("C:\\Users\\test\\Documents\\SaveFileTesting\\tester2.txt");
 		FileWriter out;
 		BufferedWriter writeFile;
@@ -23,15 +23,15 @@ public class write {
 		try {
 			out = new FileWriter(testFile);
 			writeFile = new BufferedWriter(out);
-			writeFile.write(String.valueOf(church));
+			writeFile.write(String.valueOf(c));
 			writeFile.newLine();
-			writeFile.write(String.valueOf(army));
+			writeFile.write(String.valueOf(a));
 			writeFile.newLine();
-			writeFile.write(String.valueOf(popularity));
+			writeFile.write(String.valueOf(p));
 			writeFile.newLine();
-			writeFile.write(String.valueOf(wealth));
+			writeFile.write(String.valueOf(w));
 			writeFile.newLine();
-			writeFile.write(String.valueOf(cardNum));
+			writeFile.write(String.valueOf(cN));
 			writeFile.close();
 			out.close();
 			System.out.println("Data saved!");
