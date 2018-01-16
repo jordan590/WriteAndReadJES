@@ -10,9 +10,9 @@
  */
 import java.io.*;
 public class read {
-    public static int[] readFile(){
+    public static int[] readFile(String path){
         int church = 0, army = 0, popularity = 0, wealth = 0, cardNum = 0;
-		File readFile = new File("C:\\Users\\test\\Documents\\SaveFileTesting\\tester2.txt");
+		File readFile = new File(path);
 		FileReader in;
 		BufferedReader read;
 		try {
@@ -31,8 +31,6 @@ public class read {
 		} catch (IOException e){
 			System.out.println("IOException: " + e.getMessage());
 		}
-//		System.out.println(church + " , " + army + " , " + popularity + " , " + wealth +
-//				" , " + cardNum);
                 int[] data = new int[5];
                 data[0] = church;
                 data[1] = army;
